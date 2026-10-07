@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">SD</div>
+        <div>
+          <h1>Student Dashboard</h1>
+          <span>Academic Overview</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-link active" href="#dashboard">Dashboard</a>
+        <a class="nav-link" href="#courses">Courses</a>
+        <a class="nav-link" href="#schedule">Schedule</a>
+        <a class="nav-link" href="#todo">To-Do</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Semester 1 • 2026</p>
+      </div>
+    </aside>
+
+    <main class="main-content" id="dashboard">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Welcome back</p>
+          <h2>Hi, Ananda 👋</h2>
+          <p class="muted">Here is your academic overview for this semester.</p>
+        </div>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span id="themeIcon">☾</span>
+          <span id="themeText">Dark mode</span>
+        </button>
+      </header>
+
+      <section class="stats-grid" aria-label="Academic summary">
+        <article class="stat-card primary">
+          <div>
+            <span class="stat-label">Current GPA</span>
+            <strong>3.62</strong>
+            <span class="stat-note">+0.18 from last semester</span>
+          </div>
+          <div class="stat-icon">★</div>
+        </article>
+
+        <article class="stat-card">
+          <div>
+            <span class="stat-label">Current Semester</span>
+            <strong>Semester 1</strong>
+            <span class="stat-note">Academic Year 2026</span>
+          </div>
+          <div class="stat-icon">📚</div>
+        </article>
+
+        <article class="stat-card">
+          <div>
+            <span class="stat-label">Course Progress</span>
+            <strong>68%</strong>
+            <span class="stat-note">Overall semester progress</span>
+          </div>
+          <div class="stat-icon">↗</div>
+        </article>
+
+        <article class="stat-card">
+          <div>
+            <span class="stat-label">Assignments</span>
+            <strong id="assignmentCount">4</strong>
+            <span class="stat-note">Items still to complete</span>
+          </div>
+          <div class="stat-icon">✓</div>
+        </article>
+      </section>
+
+      <section class="content-section" id="courses">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Academic progress</p>
+            <h3>My Courses</h3>
+          </div>
+          <span class="section-badge">4 courses</span>
+        </div>
+
+        <div class="course-grid">
+          <article class="course-card">
+            <div class="course-top">
+              <div>
+                <span class="course-code">DTI101</span>
+                <h4>Digital Technology</h4>
+              </div>
+              <span class="grade grade-a">A</span>
+            </div>
+            <p>Introduction to digital technology and modern systems.</p>
+            <div class="progress-info"><span>Progress</span><strong>82%</strong></div>
+            <div class="progress-track"><div class="progress-fill" style="width:82%"></div></div>
+          </article>
+
+          <article class="course-card">
+            <div class="course-top">
+              <div>
+                <span class="course-code">MTH102</span>
+                <h4>Mathematics</h4>
+              </div>
+              <span class="grade grade-b">B+</span>
+            </div>
+            <p>Functions, calculus basics, probability, and problem solving.</p>
+            <div class="progress-info"><span>Progress</span><strong>71%</strong></div>
+            <div class="progress-track"><div class="progress-fill" style="width:71%"></div></div>
+          </article>
+
+          <article class="course-card">
+            <div class="course-top">
+              <div>
+                <span class="course-code">CS105</span>
+                <h4>Programming</h4>
+              </div>
+              <span class="grade grade-a">A-</span>
+            </div>
+            <p>Python programming, functions, data structures, and logic.</p>
+            <div class="progress-info"><span>Progress</span><strong>64%</strong></div>
+            <div class="progress-track"><div class="progress-fill" style="width:64%"></div></div>
+          </article>
+
+          <article class="course-card">
+            <div class="course-top">
+              <div>
+                <span class="course-code">ENG104</span>
+                <h4>Academic English</h4>
+              </div>
+              <span class="grade grade-b">B</span>
+            </div>
+            <p>Communication, academic writing, presentations, and vocabulary.</p>
+            <div class="progress-info"><span>Progress</span><strong>55%</strong></div>
+            <div class="progress-track"><div class="progress-fill" style="width:55%"></div></div>
+          </article>
+        </div>
+      </section>
+
+      <div class="two-column">
+        <section class="panel" id="schedule">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">This week</p>
+              <h3>Class Schedule</h3>
+            </div>
+          </div>
+
+          <div class="schedule-list">
+            <div class="schedule-item">
+              <div class="day">MON <span>06 OCT</span></div>
+              <div class="schedule-main">
+                <strong>Programming</strong>
+                <span>09:00 – 12:00 • Room A204</span>
+              </div>
+              <span class="schedule-tag">CS105</span>
+            </div>
+
+            <div class="schedule-item">
+              <div class="day">TUE <span>07 OCT</span></div>
+              <div class="schedule-main">
+                <strong>Mathematics</strong>
+                <span>09:00 – 12:00 • Room B301</span>
+              </div>
+              <span class="schedule-tag">MTH102</span>
+            </div>
+
+            <div class="schedule-item">
+              <div class="day">WED <span>08 OCT</span></div>
+              <div class="schedule-main">
+                <strong>Academic English</strong>
+                <span>10:00 – 12:00 • Room C105</span>
+              </div>
+              <span class="schedule-tag">ENG104</span>
+            </div>
+
+            <div class="schedule-item">
+              <div class="day">THU <span>09 OCT</span></div>
+              <div class="schedule-main">
+                <strong>Digital Technology</strong>
+                <span>09:00 – 12:00 • Innovation Lab</span>
+              </div>
+              <span class="schedule-tag">DTI101</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="todo">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">Stay organized</p>
+              <h3>To-Do</h3>
+            </div>
+            <span id="todoTotal" class="section-badge">0 items</span>
+          </div>
+
+          <form id="todoForm" class="todo-form">
+            <input id="todoInput" type="text" placeholder="Add an assignment..." maxlength="100" required>
+            <button type="submit">Add</button>
+          </form>
+
+          <ul id="todoList" class="todo-list"></ul>
+          <p id="emptyTodo" class="empty-state">No tasks yet. Add an assignment above.</p>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <span>Student Dashboard</span>
+        <span>Built with HTML, CSS & JavaScript</span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
